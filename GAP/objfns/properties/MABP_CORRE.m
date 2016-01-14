@@ -1,0 +1,9 @@
+function [ MABP ] = MABP_CORRE( ASTMD86 )
+%用来计算已知ASTMD86的情况下摩尔平均沸点的计算；
+%   ASTMD86为T10 T30 T50 T70 T90 这5个数据。单位为F
+VABP1=VABP_CORRE( ASTMD86 );%单位为F
+SL=(ASTMD86(1,5)-ASTMD86(1,1))/(90-10);%计算斜率
+A=(-0.56379)-0.00798*(VABP1-32)^0.6667+3.04729*(SL)^0.333;
+MABP=VABP1-exp(A);%单位为F
+end
+

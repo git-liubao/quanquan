@@ -1,0 +1,11 @@
+function [ CABP ] = CABP_CORRE( ASTMD86 )
+%用来计算已知ASTMD86的情况下C平均沸点的计算；
+%   ASTMD86为T10 T30 T50 T70 T90 这5个数据。单位为F
+VABP1=VABP_CORRE( ASTMD86 );%单位为F
+SL=(ASTMD86(1,5)-ASTMD86(1,1))/(90-10)%计算斜率
+A=(-0.23589)-0.06906*(VABP1-32)^0.45+1.8858*(SL)^0.45
+CABP=VABP1-exp(A)%单位为F
+
+
+end
+

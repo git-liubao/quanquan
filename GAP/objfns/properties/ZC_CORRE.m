@@ -1,0 +1,13 @@
+function [ ZC ] = ZC_CORRE( ASTMD86,SG )
+%ZC_CORRE是通过ASTMD86和SG来计算临界压缩因子的函数
+%   ASTMD86需要T10 T30 T50 T70 T90这五个数据，单位为F
+PC1= PC_CORRE( ASTMD86,SG );%PC单位psi
+TC1= TC_CORRE( ASTMD86,SG );%TC单位R
+VC1= VC_CORRE( ASTMD86,SG );%VC单位cm3/g
+MW=MW_CORRE( ASTMD86,SG );
+PC=PC1*6895;%将PC单位由psi转化为Pa
+TC=TC1/1.8;%将TC单位由R转化为K
+VC=VC1*10^(-6)*MW;%将VC单位由cm3/g转化为m3/mol
+ZC=PC*VC/(8.314*TC);
+end
+

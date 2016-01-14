@@ -1,0 +1,9 @@
+function [ TC ] = TC_CORRE( ASTMD86,SG )
+%TC_CORRE是通过ASTMD86和SG来计算临界温度的函数
+%   ASTMD86需要T10 T30 T50 T70 T90这五个数据
+MeABP=MeABP_CORRE( ASTMD86 );%计算出温度单位为F
+TC=10.6443*(exp((-5.1747)*10^(-4)*(MeABP+459.67)-0.54444*SG+3.5995*10^(-4)*(MeABP+459.67)*SG))*(MeABP+459.67)^(0.81067)*SG^0.53691;
+%TC单位R
+
+end
+

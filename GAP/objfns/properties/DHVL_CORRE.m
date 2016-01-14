@@ -1,0 +1,15 @@
+function [ DHVL ] = DHVL_CORRE( ASTMD86,SG )
+%DHVL_CORRE是通过ASTMD86和SG来计算汽化热的函数
+%   ASTMD86需要T10 T30 T50 T70 T90这五个数据，单位为F
+MeABP=MeABP_CORRE( ASTMD86 );
+m1=(MeABP+459.67)/1.8;
+m2=SG;
+a=37.32315;
+b=1.14086;
+c=9.77089*10^(-3);
+DHVL1=a*m1^(b)*m2^(c);
+MW=MW_CORRE( ASTMD86,SG );
+DHVL=DHVL1/MW;
+
+end
+
