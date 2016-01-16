@@ -102,6 +102,9 @@ function ObjVal = myobj(Chrom,rtn_type)
    % otherwise error, wrong format of Chrom
    else
       error('size of matrix Chrom is not correct for function evaluation');
-   end   
+   end  
+   
+   
+   
 
 % End of function
