@@ -52,6 +52,9 @@ function ObjVal = myobj(Chrom,rtn_type)
 % Dimension of objective function
    Dim = 15;
 
+   
+   
+   
 % values from MICHALEWICZ
    a = 1.1;
    x0 = 100;
