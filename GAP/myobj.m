@@ -55,6 +55,7 @@ function ObjVal = myobj(Chrom,rtn_type)
    xend = x0;
    XENDWEIGHT = 0.4/(Dim^0.6);
    
+   
 % Compute population parameters
    [Nind,Nvar] = size(Chrom);
 
