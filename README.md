@@ -1,2 +1,0 @@
-# quanquan
-化学
