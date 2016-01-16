@@ -36,6 +36,9 @@ function ObjVal = myobj(Chrom,rtn_type)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %数据组的索引
     index = 1;
+    
+    
+    
 %目标函数1的阈值
     threshold1 = 0.2;
     obj_max = 5;
